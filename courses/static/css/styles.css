@@ -109,3 +109,9 @@ h1{
 {
     color: rgb(25, 74, 224);
 }
+.tag-item 
+{
+    display: inline;
+    padding: 0.5em;
+    border-radius: 1em;
+}

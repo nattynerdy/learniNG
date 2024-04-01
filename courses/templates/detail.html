@@ -4,6 +4,7 @@
  
 {% block content %}
     <h1>{{course.name}}</h1>
+    <div class="main-wrapper">
     <div class="sidebar">
         <div class="course-details">
             <div class="tags-section">
@@ -41,5 +42,6 @@
         <div class="course-content">
             <iframe href="{{ course_link }}"/>
         </div>
+    </div>
     </div>
 {% endblock %}
