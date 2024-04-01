@@ -115,3 +115,38 @@ h1{
     padding: 0.5em;
     border-radius: 1em;
 }
+.sidebar
+{
+    width: 20%;
+    padding: 1rem;
+    border: 1px solid black;
+    margin-right: 2em;
+    border-radius: 1em;
+}
+.main-wrapper
+{
+    display: flex;
+}
+.course-information
+{
+    padding-bottom: 2em;
+}
+.core-content
+{
+    width: 80%;
+    border: 1px solid black;
+    border-radius: 1em;
+    padding: 2em;
+}
+.content-nav-item
+{
+    border: 1px solid black;
+    padding: 0.5em;
+}
+.content-nav-item:hover
+{
+    color: white;
+    background-color: #00269a;
+    cursor: pointer;
+    transition: all ease-in 250ms
+}
