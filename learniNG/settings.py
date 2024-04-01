@@ -37,10 +37,9 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "learniNG.apps.CoursesConfig",
-    "learniNG.apps.TagsConfig",
-    "learniNG.apps.ContentConfig",
-    "learniNG.apps.AuthConfig",
+    "courses.apps.CoursesConfig",
+    "tags.apps.TagsConfig",
+    "content.apps.ContentConfig",
     "colorfield"
 ]
 

@@ -12,5 +12,9 @@ class Course(models.Model):
         related_name="courses",
         on_delete=models.CASCADE
     )
-    progress = models.DecimalField(decimal_places = 2, db_default = 0.0 )
+    progress = models.DecimalField(
+        decimal_places = 2, 
+        db_default = 0.0, 
+        max_digits = 4 
+    )
     page = models.IntegerField(db_default = 1)

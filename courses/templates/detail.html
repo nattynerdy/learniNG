@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title%}{{ course.name }}{% end block%}
+{% block title %}{{ course.name }}{% endblock %}
  
 {% block content %}
     <h1>{{course.name}}</h1>
@@ -12,7 +12,7 @@
                     <div class="tag-item" style="background-color: {{tag.color}}">
                         {{tag.name}}
                     </div>
-                {% end for %}
+                {% endfor %}
             </div>
             <div class="sidebar-description">
                 <h3>Description</h3>
@@ -25,7 +25,7 @@
                 <div class="content-nav-item">
                     {{ content.name }}
                 </div>
-            {% end for %}
+            {% endfor %}
         </div>
     </div>
     <div class="core-content">
@@ -42,4 +42,4 @@
             <iframe href="{{ course_link }}"/>
         </div>
     </div>
-{% end block %}
+{% endblock %}
