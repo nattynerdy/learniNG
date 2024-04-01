@@ -8,7 +8,7 @@
         <div class="course-details">
             <div class="tags-section">
                 <h3>Tags</h3>
-                {% for tag in course.tags %}
+                {% for tag in course.tags.all %}
                     <div class="tag-item" style="background-color: {{tag.color}}">
                         {{tag.name}}
                     </div>
@@ -21,7 +21,7 @@
         </div>
         <div class="course-nav">
             <h3>Course Content</h3>
-            {% for content in course.content %}
+            {% for content in course.content.all %}
                 <div class="content-nav-item">
                     {{ content.name }}
                 </div>
@@ -34,7 +34,7 @@
                 Assignee: {{ course.assignee.username }}
             </div>
             <div class="progress-info">
-                <span>Progress: {{ str(course.progress * 100) + "%" }}</span>
+                <span>Progress: {{ progress }}</span>
                 <span>Page: {{ course.page }}</span>
             </div>
         </div>

@@ -16,9 +16,11 @@ def one_course(request, id):
     for content in contents:
         if content.course.id == course.id:
             link = content.link
+    progress = str(course.progress * 100) + "%"
     context = {
         "course": course,
-        "course_link": link
+        "course_link": link,
+        "progress": progress
     }
     return render(request, "detail.html", context)
 
