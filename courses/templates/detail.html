@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title%}{{ course.name }}{% end block%}
+ 
+{% block content %}
+    <h1>{{course.name}}</h1>
+    <div class="sidebar">
+        <div class="course-details">
+            <div class="tags-section">
+                <h3>Tags</h3>
+                {% for tag in course.tags %}
+                    <div class="tag-item" style="background-color: {{tag.color}}">
+                        {{tag.name}}
+                    </div>
+                {% end for %}
+            </div>
+            <div class="sidebar-description">
+                <h3>Description</h3>
+                <p>{{course.description}}</p>
+            </div>
+        </div>
+        <div class="course-nav">
+            <h3>Course Content</h3>
+            {% for content in course.content %}
+                <div class="content-nav-item">
+                    {{ content.name }}
+                </div>
+            {% end for %}
+        </div>
+    </div>
+    <div class="core-content">
+        <div class="course-information">
+            <div class="core-details">
+                Assignee: {{ course.assignee.username }}
+            </div>
+            <div class="progress-info">
+                <span>Progress: {{ str(course.progress * 100) + "%" }}</span>
+                <span>Page: {{ course.page }}</span>
+            </div>
+        </div>
+        <div class="course-content">
+            <iframe href="{{ course_link }}"/>
+        </div>
+    </div>
+{% end block %}

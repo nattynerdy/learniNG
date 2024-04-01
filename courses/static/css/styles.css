@@ -1,0 +1,111 @@
+@font-face {
+    font-family: 'Futura';
+    src: url("../fonts/futura-pt/FuturaCyrillicMedium.ttf");
+}
+* {
+    box-sizing: border-box;
+    font-family: 'Futura', Tahoma, Geneva, Verdana, sans-serif;
+}
+html,body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+}
+header {
+    font-size: 3.5em;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    position: relative;
+    padding-left: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    height: 6.5rem;
+    box-shadow: 0px 7px 15px 0px rgba(0,0,0,0.5);
+    color: white;
+    background-color: black;
+    
+}
+main {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0px;
+    padding: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
+    height: calc(100% - 6.5rem);
+}
+.ng-logo {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-top: 8px solid white;
+    border-right: 8px solid white;
+    background-color: transparent;
+    left: 4.75em;
+}
+h1{
+    font-size: 3rem;
+    font-weight: bold;
+}
+.course-list
+{
+    display: grid;
+    grid-gap: 2.75rem;
+    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+}
+.course-card 
+{
+    box-shadow: 0 3px 3px -2px rgba(0,0,0,.2),0 3px 4px 0 rgba(0,0,0,.14),0 1px 8px 0 rgba(0,0,0,.12);
+    display: flex;
+    flex-direction: column;
+}
+.card-body
+{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    max-height: 15rem;
+    flex-grow: 1;
+}
+.arrow
+{
+    height: 1rem;
+    width: 1rem;
+    position: relative;
+    top: 2px;
+}
+.card-description{
+    padding: 1rem;
+    overflow: hidden;
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.link-bar
+{
+    background-color: #00269a;
+    height: 1.25rem;
+    width: 100%;
+    display: block;
+    margin: 0px;
+    padding: 0px;
+}
+.card-title
+{
+    margin: 0px;
+}
+.course-button
+{
+    color: rgb(0, 38, 153);
+    text-decoration: none;
+    margin-top: auto;
+}
+.course-button:hover, .course-button:focus
+{
+    color: rgb(25, 74, 224);
+}

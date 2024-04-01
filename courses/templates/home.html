@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title%}learniNG: Northrup Grumman LMS{% end block%}
+ 
+{% block content %}
+<h1>My Courses</h1>
+<div class="course-list">
+    {% for course in courses %}
+    <div class="course-card">
+        <a class="link-bar" href="{% url 'show_course' course.id %}"></a>
+        <div class="card-body">
+            <h3 class="card-title">{{ course.name }}</h3>
+            <div class="card-description">{{ course.description }}</div>
+            <a class="course-button" href="{% url 'show_course' course.id %}">
+                <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="arrow">
+                    <path d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z"></path>
+                </svg>
+                Open course
+            </a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% end block %}
