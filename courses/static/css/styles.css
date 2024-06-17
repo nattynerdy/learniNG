@@ -78,13 +78,16 @@ h1{
     position: relative;
     top: 2px;
 }
+.card-progress{
+    padding: 1rem;
+    padding-bottom: 0px;
+}
 .card-description{
     padding: 1rem;
     overflow: hidden;
     display: inline-block;
     text-overflow: ellipsis;
     width: 100%;
-    margin-bottom: 1rem;
 }
 .link-bar
 {
@@ -149,4 +152,8 @@ h1{
     background-color: #00269a;
     cursor: pointer;
     transition: all ease-in 250ms
+}
+.pagination
+{
+    margin-top: 1rem;
 }

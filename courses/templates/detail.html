@@ -35,13 +35,40 @@
                 Assignee: {{ course.assignee.username }}
             </div>
             <div class="progress-info">
-                <span>Progress: {{ progress }}</span>
-                <span>Page: {{ course.page }}</span>
+                <span>Progress: {{ course.progress|stringformat:"d%%" }}</span>
             </div>
         </div>
         <div class="course-content">
-            <iframe href="{{ course_link }}"/>
+            <iframe
+    width="600"
+    height="338"
+    frameBorder="0"
+    src="https://flip.com/s/ku2moU5gyRy6?embed=true"
+    webkitallowfullscreen
+    mozallowfullscreen
+    allowfullscreen
+    allow="microphone; camera; display-capture"></iframe>
+        </div>
+        <div class="pagination">
+            <div>Page: <span id="current-page">3</span> of 13</div>
+            <button onclick="goBack();">Back</button><button onclick="goForward();">Next</button>
         </div>
     </div>
     </div>
+
+    <script>
+        function goBack()
+        {
+            current = parseInt($("#current-page").text());
+            current -= 1;
+            $("#current-page").text(current.toString());
+        }
+
+        function goForward()
+        {
+            current = parseInt($("#current-page").text());
+            current += 1;
+            $("#current-page").text(current.toString());
+        }
+    </script>
 {% endblock %}

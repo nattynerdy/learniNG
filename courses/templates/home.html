@@ -10,6 +10,7 @@
         <a class="link-bar" href="{% url 'show_course' course.id %}"></a>
         <div class="card-body">
             <h3 class="card-title">{{ course.name }}</h3>
+            <div class="card-progress">Course Progress: {{ course.progress|stringformat:"d%%" }}</div>
             <div class="card-description">{{ course.description }}</div>
             <a class="course-button" href="{% url 'show_course' course.id %}">
                 <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="arrow">
